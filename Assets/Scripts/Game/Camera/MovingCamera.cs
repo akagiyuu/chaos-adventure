@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class StartCamera : MonoBehaviour
+public class MovingCamera : MonoBehaviour
 {
-    [SerializeField] private float moveDistance;
+    [SerializeField] private float moveDistance = 0.1f;
 
     void FixedUpdate()
     {
