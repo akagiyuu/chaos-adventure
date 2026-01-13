@@ -65,4 +65,5 @@
     margin-right: 0;
     margin-bottom: 10px;
     margin-left: 0;
+    background-image: none;
 }
