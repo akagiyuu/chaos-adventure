@@ -35,10 +35,11 @@ public partial class MoveToNearestEnemyAction : Action
 
         var attackPoint = combat.AttackPoint.position;
 
-        var nearest = enemies[0];
-        var distance = (attackPoint - enemies[0].transform.position).magnitude;
-        for (int i = 1; i < enemies.Length; i++)
+        Collider2D nearest = null;
+        var distance = Mathf.Infinity;
+        for (int i = 0; i < enemies.Length; i++)
         {
+            if (enemies[i].GetComponent<Stats>().IsDeath) continue;
             var current = (attackPoint - enemies[i].transform.position).magnitude;
             if (current < distance)
             {
@@ -46,6 +47,7 @@ public partial class MoveToNearestEnemyAction : Action
                 nearest = enemies[i];
             }
         }
+        if (distance == Mathf.Infinity) return Status.Failure;
         var enemy = nearest.transform.position;
 
         if ((enemy - attackPoint).magnitude <= combat.AttackRadius)
