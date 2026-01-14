@@ -3840,7 +3840,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.749102, y: -4.5834303, z: -10}
+  m_LocalPosition: {x: -3.748344, y: -4.5834303, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4529,7 +4529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29374bec715e13404a281aea9a2a7af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatStats
-  MaxHealth: 200
+  MaxHealth: 10
   Health: 0
   healthBar: {fileID: 0}
   MaxShield: 10

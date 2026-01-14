@@ -39,6 +39,15 @@ public class CombatAnimator : MonoBehaviour
         movement.Enable();
     }
 
+    private void OnDeathEnd()
+    {
+        movement.Disable();
+        StartCoroutine(Util.Timeout(
+            () => Destroy(combat.gameObject),
+            1f
+        ));
+    }
+
     public void AnimateDeath()
     {
         animator.SetBool("isDeath", true);
