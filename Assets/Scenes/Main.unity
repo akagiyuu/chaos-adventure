@@ -3966,51 +3966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ed4a0c52ca9c2fa8445ae626be49d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
-  UI: {fileID: 575306209}
---- !u!1 &579638648
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 579638650}
-  - component: {fileID: 579638649}
-  m_Layer: 0
-  m_Name: Pause Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &579638649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579638648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fdba9f8a0c4d551f8ffc74ac46df1a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseController
---- !u!4 &579638650
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579638648}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28957033, y: -0.4814999, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1686671884}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  pauseManager: {fileID: 11400000, guid: 0517e49e8ecb97ce68f1519f9b0f8cf5, type: 2}
 --- !u!1 &615520027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9107665706490725799, guid: fcd79c1c91a423e5da7426a4c8b57364, type: 3}
@@ -5023,38 +4979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0d15f41c60d4c8289f92d06e13ed4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementAnimator
---- !u!1 &1686671883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1686671884}
-  m_Layer: 0
-  m_Name: '[Controller]'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1686671884
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686671883}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.01148, y: 2.85427, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 579638650}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1711154733
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,5 +5680,4 @@ SceneRoots:
   - {fileID: 2314493746450384061}
   - {fileID: 1365988572}
   - {fileID: 306279835}
-  - {fileID: 1686671884}
   - {fileID: 1438209576}
