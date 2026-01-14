@@ -4,8 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(AttackController))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Movement movement;
-    [SerializeField] private AttackController combat;
+    private Movement movement;
+    private AttackController combat;
+    [SerializeField] InputManagerSO input;
 
     void Awake()
     {
@@ -13,14 +14,12 @@ public class Player : MonoBehaviour
         combat = GetComponent<AttackController>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        Vector2 input = InputController.Instance.MoveInput;
-
-        movement.Move(input);
-        if (input.y > 0.5f)
+        movement.Move(input.Move);
+        if (input.Move.y > 0.5f)
             movement.Jump();
-        if (InputController.Instance.AttackInput)
+        if (input.IsAttack)
             combat.Attack();
     }
 }
