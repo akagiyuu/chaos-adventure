@@ -18,7 +18,7 @@ public class AttackManager : MonoBehaviour
     [SerializeField] private RegenerationManager regenerator;
 
     private float lastAttackTime = -Mathf.Infinity;
-    private bool CanAttack { get => Time.unscaledTime - lastAttackTime >= attackCooldown; }
+    private bool CanAttack { get => !stats.IsDeath && Time.unscaledTime - lastAttackTime >= attackCooldown; }
 
     void Awake()
     {
