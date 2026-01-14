@@ -10,11 +10,11 @@ public partial class AttackEnemyAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Agent;
 
-    private AttackController combat;
+    private AttackManager combat;
 
     protected override Status OnStart()
     {
-        combat = Agent.Value.GetComponent<AttackController>();
+        combat = Agent.Value.GetComponent<AttackManager>();
 
         return Status.Running;
     }

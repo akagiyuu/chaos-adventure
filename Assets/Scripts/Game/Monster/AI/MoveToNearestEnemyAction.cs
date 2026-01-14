@@ -13,13 +13,13 @@ public partial class MoveToNearestEnemyAction : Action
     [SerializeReference] public BlackboardVariable<float> Radius;
     [SerializeReference] public BlackboardVariable<GameObject> Agent;
 
-    private Movement movement;
-    private AttackController combat;
+    private MovementManager movement;
+    private AttackManager combat;
 
     protected override Status OnStart()
     {
-        movement = Agent.Value.GetComponent<Movement>();
-        combat = Agent.Value.GetComponent<AttackController>();
+        movement = Agent.Value.GetComponent<MovementManager>();
+        combat = Agent.Value.GetComponent<AttackManager>();
 
         return Status.Running;
     }

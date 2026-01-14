@@ -3840,7 +3840,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7404037, y: -4.5834303, z: -10}
+  m_LocalPosition: {x: -3.7559905, y: -4.5834303, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4072,8 +4072,8 @@ GameObject:
   - component: {fileID: 775290725}
   - component: {fileID: 775290726}
   - component: {fileID: 775290727}
-  m_Layer: 0
-  m_Name: Death
+  m_Layer: 5
+  m_Name: Death Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4129,7 +4129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c9096d8b2599464874618950aad4ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Death
-  UI: {fileID: 775290726}
+  sceneManager: {fileID: 11400000, guid: db7e12d7ef6dc91d6b54d0a3da4dc9d7, type: 2}
   stats: {fileID: 1971927686}
 --- !u!1 &814037706
 GameObject:
@@ -4441,18 +4441,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: 7874722517443745752, guid: 944400ffdbb934efdab9470deb46e2b6, type: 2}
+  m_Graph: {fileID: 1429854837154264072, guid: 944400ffdbb934efdab9470deb46e2b6, type: 2}
   m_BlackboardVariableOverridesList:
-  - rid: 4723884804120510736
-  - rid: 4723884810346692685
-  - rid: 4723884830943347354
-  m_OriginalGraph: {fileID: 7874722517443745752, guid: 944400ffdbb934efdab9470deb46e2b6, type: 2}
+  - rid: 4723884906653679973
+  - rid: 4723884906653679974
+  - rid: 4723884906653679975
+  m_OriginalGraph: {fileID: 1429854837154264072, guid: 944400ffdbb934efdab9470deb46e2b6, type: 2}
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
     version: 2
     RefIds:
-    - rid: 4723884804120510736
+    - rid: 4723884906653679973
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -4460,20 +4460,20 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 1372981528}
-    - rid: 4723884810346692685
+    - rid: 4723884906653679974
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 16699789394364216995
-          m_Value1: 6734893795998298837
-        Name: PatrolPoint
+          m_Value0: 18068001592829373955
+          m_Value1: 7077706778916762315
+        Name: Patrol Point
         m_Value: {fileID: 1025628637}
-    - rid: 4723884830943347354
+    - rid: 4723884906653679975
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 17011760510305564505
-          m_Value1: 17885474715167197811
+          m_Value0: 784224725839353564
+          m_Value1: 2329785707011503121
         Name: Detection Radius
         m_Value: 10
 --- !u!114 &1372981542
@@ -4639,7 +4639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1438209576}
   m_Layer: 0
-  m_Name: UI
+  m_Name: '[UI]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5555,7 +5555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29374bec715e13404a281aea9a2a7af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatStats
-  MaxHealth: 100
+  MaxHealth: 10
   Health: 0
   healthBar: {fileID: 7203673}
   MaxShield: 10

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Movement : MonoBehaviour
+public class MovementManager : MonoBehaviour
 {
     [SerializeField] private float moveForce = 80f;
     [SerializeField] private float acceleration = 80f;

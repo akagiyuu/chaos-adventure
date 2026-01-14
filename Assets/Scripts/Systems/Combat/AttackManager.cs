@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Stats))]
-public class AttackController : MonoBehaviour
+public class AttackManager : MonoBehaviour
 {
     public Transform AttackPoint;
     public float AttackRadius;
@@ -13,9 +13,9 @@ public class AttackController : MonoBehaviour
 
     private Rigidbody2D rb;
     private CombatAnimator animator;
-    private Movement movement;
+    private MovementManager movement;
     private Stats stats;
-    [SerializeField] private Regenerator regenerator;
+    [SerializeField] private RegenerationManager regenerator;
 
     private float lastAttackTime = -Mathf.Infinity;
     private bool CanAttack { get => Time.unscaledTime - lastAttackTime >= attackCooldown; }
@@ -24,7 +24,7 @@ public class AttackController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<CombatAnimator>();
-        movement = GetComponentInParent<Movement>();
+        movement = GetComponentInParent<MovementManager>();
         stats = GetComponent<Stats>();
     }
 
@@ -49,7 +49,7 @@ public class AttackController : MonoBehaviour
         var opponents = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRadius, EnemyLayer);
         foreach (var opponent in opponents)
         {
-            opponent.GetComponent<AttackController>().TakeDamage(stats.Damage, movement.Direction, knockbackForce);
+            opponent.GetComponent<AttackManager>().TakeDamage(stats.Damage, movement.Direction, knockbackForce);
         }
     }
 

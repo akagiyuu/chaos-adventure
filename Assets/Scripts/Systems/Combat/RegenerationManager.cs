@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Stats))]
-public class Regenerator : MonoBehaviour
+public class RegenerationManager : MonoBehaviour
 {
     [SerializeField] private float healthRegenPercent = 0.1f;
     [SerializeField] private float healthRegenDelay = 10;

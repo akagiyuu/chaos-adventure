@@ -4,14 +4,14 @@ using UnityEngine;
 public class CombatAnimator : MonoBehaviour
 {
     private Animator animator;
-    private Movement movement;
-    private AttackController combat;
+    private MovementManager movement;
+    private AttackManager combat;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        movement = GetComponentInParent<Movement>();
-        combat = GetComponentInParent<AttackController>();
+        movement = GetComponentInParent<MovementManager>();
+        combat = GetComponentInParent<AttackManager>();
     }
 
     public void AnimateAttack()

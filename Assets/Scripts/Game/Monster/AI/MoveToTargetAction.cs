@@ -8,7 +8,7 @@ using Action = Unity.Behavior.Action;
 [NodeDescription(name: "Move to Target", story: "Move [Agent] to [Target]", category: "Action", id: "1dfeadaec42d5856081f333babfaf85d")]
 public partial class MoveToTargetAction : Action
 {
-    [SerializeReference] public BlackboardVariable<Movement> Agent;
+    [SerializeReference] public BlackboardVariable<MovementManager> Agent;
     [SerializeReference] public BlackboardVariable<GameObject> Target;
 
     protected override Status OnUpdate()

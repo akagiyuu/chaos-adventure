@@ -5,13 +5,13 @@ public class MovementAnimator : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
-    private Movement movement;
+    private MovementManager movement;
 
     private void Awake()
     {
         rb = GetComponentInParent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        movement = GetComponentInParent<Movement>();
+        movement = GetComponentInParent<MovementManager>();
     }
 
     private void FixedUpdate()
