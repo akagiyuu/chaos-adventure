@@ -31,7 +31,7 @@ public class RegenerationManager : MonoBehaviour
         StartCoroutine(Util.Periodic(() =>
         {
             if (Time.unscaledTime - lastDisable < healthRegenDelay) return;
-            if(stats.Shield == 0) return;
+            if (stats.Shield == 0) return;
             if (stats.Health == stats.MaxHealth) return;
 
             stats.Health = Mathf.Min(
@@ -39,6 +39,12 @@ public class RegenerationManager : MonoBehaviour
                 stats.MaxHealth
             );
         }, 1f));
+    }
+
+    void FixedUpdate()
+    {
+        if (stats.IsDeath)
+            StopAllCoroutines();
     }
 
     public void Disable()
