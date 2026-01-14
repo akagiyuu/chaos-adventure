@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,7 +14,7 @@ public class SceneTransitionOveray : MonoBehaviour
     private float Alpha
     {
         get => main.style.backgroundColor.value.a;
-        set => main.style.backgroundColor = main.style.backgroundColor.value.WithAlpha(value);
+        set => main.style.backgroundColor = new Color(main.style.backgroundColor.value.r, main.style.backgroundColor.value.g, main.style.backgroundColor.value.b, value);
     }
 
     void Awake()
