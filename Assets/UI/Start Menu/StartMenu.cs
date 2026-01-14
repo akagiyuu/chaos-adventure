@@ -9,7 +9,7 @@ public class StartMenu : MonoBehaviour
     void Awake()
     {
         Button playButton = UI.rootVisualElement.Query<Button>("play-button");
-        playButton.clicked += () => SceneManager.LoadScene("Main");
+        playButton.clicked += () => StartCoroutine(SceneUtil.LoadScene("Main"));
 
         Button exitButton = UI.rootVisualElement.Query<Button>("exit-button");
         exitButton.clicked += Application.Quit;
