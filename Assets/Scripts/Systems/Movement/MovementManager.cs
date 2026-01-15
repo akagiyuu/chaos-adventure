@@ -9,7 +9,7 @@ public class MovementManager : MonoBehaviour
 
     [SerializeField] private float jumpForce = 35f;
 
-    [SerializeField] private LayerMask groundLayer;
+    public LayerMask GroundLayer;
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private Vector2 groundCheckOffset = new(0, -0.5f);
 
@@ -66,7 +66,7 @@ public class MovementManager : MonoBehaviour
     private bool CheckGround()
     {
         Vector2 groundCheckPos = (Vector2)transform.position + groundCheckOffset;
-        return Physics2D.OverlapCircle(groundCheckPos, groundCheckRadius, groundLayer);
+        return Physics2D.OverlapCircle(groundCheckPos, groundCheckRadius, GroundLayer);
     }
 
     private void Flip()
