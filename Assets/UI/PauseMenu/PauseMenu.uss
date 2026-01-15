@@ -58,3 +58,17 @@
     margin-bottom: 7%;
     margin-left: 7%;
 }
+
+.button:hover {
+    background-image: url("project://database/Assets/Arts/Humble%20Gift/PNG/SpriteSheet.png?fileID=-7110964374204439647&guid=a79f7a56604f0d59199c9f957f932887&type=3#SpriteSheet_86");
+    -unity-font-definition: url("project://database/Assets/Fonts/Silver.ttf?fileID=12800000&guid=3c4f9992dc2c22e02a17164eedd6d39e&type=3#Silver");
+    font-size: 32px;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
+    margin-right: 7%;
+    margin-bottom: 7%;
+    margin-left: 7%;
+}
