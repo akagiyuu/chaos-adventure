@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/PauseMenu/PauseMenu.uss?fileID=7433441132597879392&amp;guid=0bd8e7cf8e4bd4a87afd52479301d63d&amp;type=3#PauseMenu"/>
-    <ui:VisualElement name="main" class="backdrop" style="flex-grow: 1; visibility: visible;">
+    <ui:VisualElement name="main" class="backdrop" style="flex-grow: 1; visibility: hidden;">
         <ui:Image source="project://database/Assets/Arts/Humble%20Gift/PNG/SpriteSheet.png?fileID=8755591262435691780&amp;guid=a79f7a56604f0d59199c9f957f932887&amp;type=3#SpriteSheet_1" scale-mode="StretchToFill" class="menu">
             <ui:Image source="project://database/Assets/Arts/Humble%20Gift/PNG/SpriteSheet.png?fileID=574446148126647275&amp;guid=a79f7a56604f0d59199c9f957f932887&amp;type=3#SpriteSheet_66" class="menu-border"/>
             <ui:Image source="project://database/Assets/Arts/Humble%20Gift/PNG/SpriteSheet.png?fileID=-1504178909458899807&amp;guid=a79f7a56604f0d59199c9f957f932887&amp;type=3#SpriteSheet_79" class="header"/>

@@ -2771,6 +2771,11 @@ Transform:
   - {fileID: 1448325552}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &849724713 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6639544766249356611, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
+  m_PrefabInstance: {fileID: 2430676730404814387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &990971711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +2807,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 83029146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1071850630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7880770320794825528, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
+  m_PrefabInstance: {fileID: 2430676730404814387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130928926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2349290636204437630, guid: fcd79c1c91a423e5da7426a4c8b57364, type: 3}
@@ -3765,6 +3775,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 83029146}
     m_Modifications:
+    - target: {fileID: 255839900904253537, guid: 16feaf69c96689808b2826515b1239e3, type: 3}
+      propertyPath: moveForce
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1072885166730739766, guid: 16feaf69c96689808b2826515b1239e3, type: 3}
       propertyPath: managedReferences[4723884906653679974].m_Value
       value: 
@@ -3812,6 +3826,10 @@ PrefabInstance:
     - target: {fileID: 4501617400117770118, guid: 16feaf69c96689808b2826515b1239e3, type: 3}
       propertyPath: m_Name
       value: King
+      objectReference: {fileID: 0}
+    - target: {fileID: 5749158388846388064, guid: 16feaf69c96689808b2826515b1239e3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3890,11 +3908,11 @@ PrefabInstance:
     - target: {fileID: 1047398294616483721, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 7203673}
+      objectReference: {fileID: 1071850630}
     - target: {fileID: 1047398294616483721, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
       propertyPath: shieldBar
       value: 
-      objectReference: {fileID: 2018856472}
+      objectReference: {fileID: 849724713}
     - target: {fileID: 1563149313695833077, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
       propertyPath: m_Name
       value: Player
