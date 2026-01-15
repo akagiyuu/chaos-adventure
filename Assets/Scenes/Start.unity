@@ -463,6 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartMenu
   sceneManager: {fileID: 11400000, guid: db7e12d7ef6dc91d6b54d0a3da4dc9d7, type: 2}
+  timer: {fileID: 11400000, guid: afdd33178df0df0e7be47b55c7e1fc38, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
