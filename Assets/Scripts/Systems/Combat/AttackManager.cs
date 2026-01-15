@@ -83,7 +83,11 @@ public class AttackManager : MonoBehaviour
         rb.AddForce(new Vector2(knockback * direction, 0), ForceMode2D.Force);
 
         animator.AnimateHurt();
-        if (stats.IsDeath) animator.AnimateDeath();
+        if (stats.IsDeath)
+        {
+            movement.Disable();
+            animator.AnimateDeath();
+        }
     }
 
     public void OnDrawGizmos()
