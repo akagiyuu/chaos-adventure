@@ -1,15 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/Start%20Menu/StartMenu.uss?fileID=7433441132597879392&amp;guid=c7db37aad68a9967ab0ac4c9722cdccd&amp;type=3#StartMenu"/>
-    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: space-around; background-color: rgba(0, 0, 0, 0.75);">
-        <ui:VisualElement name="menu">
-            <ui:Label text="Chaos Adventure&#10;" name="title"/>
-            <ui:Button text="" name="play-button">
-                <ui:Image source="project://database/Assets/Arts/Medieval%20UI/Medieval.png?fileID=-3907709713878906617&amp;guid=0b8b3428ae57c6378b5c20f8dd12365a&amp;type=3#Medieval_117" name="play-icon"/>
-                <ui:Label text="PLAY"/>
-            </ui:Button>
-            <ui:Button text="" name="exit-button">
-                <ui:Label text="EXIT GAME"/>
-            </ui:Button>
-        </ui:VisualElement>
+    <Style src="project://database/Assets/UI/StartMenu/StartMenu.uss?fileID=7433441132597879392&amp;guid=c7db37aad68a9967ab0ac4c9722cdccd&amp;type=3#StartMenu"/>
+    <ui:VisualElement name="main" class="backdrop" style="width: 100%; height: 100%;">
+        <ui:Label text="Chaos Adventure&#10;" name="title"/>
+        <ui:Image source="project://database/Assets/Arts/Medieval%20UI/Medieval.png?fileID=-1727664103684811981&amp;guid=0b8b3428ae57c6378b5c20f8dd12365a&amp;type=3#Medieval_10" name="play-button"/>
     </ui:VisualElement>
 </ui:UXML>
