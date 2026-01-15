@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 473381798}
   - component: {fileID: 473381802}
   - component: {fileID: 473381800}
-  - component: {fileID: 473381801}
+  - component: {fileID: 473381803}
   m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
@@ -2927,7 +2927,34 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!66 &473381801
+--- !u!50 &473381802
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473381796}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &473381803
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2962,7 +2989,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -3070,33 +3097,6 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 473381796}
---- !u!50 &473381802
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473381796}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,7 +3205,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3230,7 +3230,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7554436, y: -4.5834303, z: -10}
+  m_LocalPosition: {x: 5.1680975, y: 0.4165697, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4129,13 +4129,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -12.632328, y: 1.0088165}
+    - - {x: 18.544266, y: 16.18968}
+      - {x: 0.65188026, y: 16.173763}
+      - {x: -12.55295, y: 16.119715}
       - {x: -12.645872, y: -9.583429}
       - {x: 62.27782, y: -9.583428}
-      - {x: 62.287952, y: 7.5946627}
-      - {x: 23.653252, y: 7.5886626}
-      - {x: 23.66763, y: 1.0088167}
+      - {x: 62.287952, y: 15.990329}
+      - {x: 47.09525, y: 16.186407}
+      - {x: 36.499672, y: 16.168348}
+      - {x: 33.684082, y: 16.257751}
+      - {x: 28.768906, y: 16.224043}
+      - {x: 23.388405, y: 16.281229}
   m_UseDelaunayMesh: 1
 --- !u!1 &1491521963
 GameObject:
@@ -4303,8 +4307,8 @@ Transform:
   m_GameObject: {fileID: 1711154733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 5.15, y: 3.81, z: 10}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalPosition: {x: 11.38, y: 7.66, z: 10}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7203673}
@@ -4508,7 +4512,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 5
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -4924,11 +4928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8861738380600354773, guid: fcd79c1c91a423e5da7426a4c8b57364, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.3
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 8861738380600354773, guid: fcd79c1c91a423e5da7426a4c8b57364, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: 8861738380600354773, guid: fcd79c1c91a423e5da7426a4c8b57364, type: 3}
       propertyPath: m_LocalPosition.z
