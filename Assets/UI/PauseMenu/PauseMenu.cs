@@ -11,13 +11,13 @@ public class PauseMenu : MonoBehaviour
     {
         UI = GetComponent<UIDocument>();
 
-        VisualElement main = UI.rootVisualElement.Query<VisualElement>("pause-menu");
+        VisualElement main = UI.rootVisualElement.Query<VisualElement>("main");
         pauseManager.ChangeEvent += (isPaused) => main.visible = isPaused;
 
-        Button resumeButton = UI.rootVisualElement.Query<Button>("resume-button");
-        resumeButton.clicked += () => pauseManager.Resume();
+        VisualElement resumeButton = UI.rootVisualElement.Query<VisualElement>("resume-button");
+        resumeButton.RegisterCallback<PointerDownEvent>(e => pauseManager.Resume());
 
-        Button exitButton = UI.rootVisualElement.Query<Button>("exit-button");
-        exitButton.clicked += Application.Quit;
+        VisualElement exitButton = UI.rootVisualElement.Query<VisualElement>("exit-button");
+        resumeButton.RegisterCallback<PointerDownEvent>(e => Application.Quit());
     }
 }

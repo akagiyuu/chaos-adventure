@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Stats : MonoBehaviour
@@ -19,8 +20,6 @@ public class Stats : MonoBehaviour
         get => Health <= 0;
     }
 
-    [SerializeField] private SpriteRenderer fill;
-
     void Awake()
     {
         Health = MaxHealth;
@@ -33,7 +32,6 @@ public class Stats : MonoBehaviour
         {
             var healthPercent = GetSmoothPercent(healthBar.localScale.x, Health / MaxHealth);
             healthBar.localScale = new Vector3(healthPercent, healthBar.localScale.y, healthBar.localScale.z);
-            fill.color = Color.Lerp(Color.red, Color.green, healthPercent);
         }
 
         if (shieldBar != null)

@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,8 +7,13 @@ using UnityEngine.SceneManagement;
 public class SceneManagerSO : ScriptableObject
 {
     [SerializeField] private GameObject overlayPrefab;
+    [SerializeField] private string startScene = "Start";
+    [SerializeField] private string levelPrefix = "Level";
 
-    public IEnumerator LoadScene(string sceneName)
+    public IEnumerator LoadStart() => LoadScene(startScene);
+    public IEnumerator LoadLevel(int level) => LoadScene($"{levelPrefix} {level}");
+
+    private IEnumerator LoadScene(string sceneName)
     {
         var overlayObject = Instantiate(overlayPrefab);
         var overlay = overlayObject.GetComponent<SceneTransitionOveray>();
