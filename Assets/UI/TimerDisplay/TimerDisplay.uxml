@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/TimerDisplay/TimerDisplay.uss?fileID=7433441132597879392&amp;guid=dbffce8130a8a6331b7c13f5a6566d2d&amp;type=3#TimerDisplay"/>
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="Time: 100" name="timer" class="timer"/>
+    </ui:VisualElement>
+</ui:UXML>
