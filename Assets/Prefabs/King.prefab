@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29374bec715e13404a281aea9a2a7af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatStats
-  MaxHealth: 10
+  MaxHealth: 100
   Health: 100
   healthBar: {fileID: 0}
   MaxShield: 10
