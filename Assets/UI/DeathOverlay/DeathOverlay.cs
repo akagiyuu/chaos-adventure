@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 public class DeathOverlay : MonoBehaviour
 {
     [SerializeField] private SceneManagerSO sceneManager;
-    [SerializeField] private Stats stats;
     private UIDocument UI;
 
     private VisualElement main;
@@ -16,10 +15,5 @@ public class DeathOverlay : MonoBehaviour
 
         main = UI.rootVisualElement.Query<VisualElement>("main");
         main.RegisterCallback<PointerDownEvent>(e => StartCoroutine(sceneManager.LoadScene("Start")));
-    }
-
-    void FixedUpdate()
-    {
-        main.visible = stats.IsDeath;
     }
 }
