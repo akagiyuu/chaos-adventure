@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Stats))]
 public class MovementManager : MonoBehaviour
 {
     [SerializeField] private float moveForce = 80f;
@@ -12,7 +13,10 @@ public class MovementManager : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private Vector2 groundCheckOffset = new(0, -0.5f);
 
+    [SerializeField] private float minY;
+
     private Rigidbody2D rb;
+    private Stats stats;
 
     private bool canMove = true;
     public float Direction { get; private set; } = 1f;
@@ -22,11 +26,13 @@ public class MovementManager : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<Stats>();
     }
 
     void FixedUpdate()
     {
         IsGrounded = CheckGround();
+        if(IsFalling()) stats.Health = 0;
     }
 
     public void Move(Vector2 input)
@@ -60,6 +66,11 @@ public class MovementManager : MonoBehaviour
     {
         Vector2 groundCheckPos = (Vector2)transform.position + groundCheckOffset;
         return Physics2D.OverlapCircle(groundCheckPos, groundCheckRadius, groundLayer);
+    }
+
+    private bool IsFalling()
+    {
+        return transform.position.y < minY;
     }
 
     private void Flip()
