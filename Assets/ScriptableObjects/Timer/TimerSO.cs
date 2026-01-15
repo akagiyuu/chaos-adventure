@@ -4,9 +4,10 @@ using UnityEngine;
 public class TimerSO : ScriptableObject
 {
     private float start = 0;
-    public float Elapsed { get => Time.fixedTime - start; }
 
     void Awake() => start = Time.fixedTime;
+
+    public float Elapsed() => Time.fixedTime - start;
 
     public void Reset() => start = Time.fixedTime;
 }
