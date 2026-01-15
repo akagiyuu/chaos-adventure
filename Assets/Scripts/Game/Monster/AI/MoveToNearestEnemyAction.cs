@@ -50,6 +50,13 @@ public partial class MoveToNearestEnemyAction : Action
         if (distance == Mathf.Infinity) return Status.Failure;
         var enemy = nearest.transform.position;
 
+        var front = Agent.Value.transform.position + 0.2f * Vector3.right;
+        if (!Physics2D.Raycast(front, Vector2.down, 1000f, movement.GroundLayer))
+        {
+            movement.Stop();
+            return Status.Failure;
+        }
+
         if ((enemy - attackPoint).magnitude <= combat.AttackRadius)
         {
             movement.Stop();
@@ -60,10 +67,6 @@ public partial class MoveToNearestEnemyAction : Action
         movement.Move(direction);
 
         return Status.Running;
-    }
-
-    protected override void OnEnd()
-    {
     }
 }
 

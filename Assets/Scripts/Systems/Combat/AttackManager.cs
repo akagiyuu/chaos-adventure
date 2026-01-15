@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -10,15 +11,20 @@ public class AttackManager : MonoBehaviour
     [SerializeField] private float attackDuration;
     [SerializeField] private float knockbackForce = 1000f;
     public LayerMask EnemyLayer;
+    private float lastAttackTime = -Mathf.Infinity;
+    private bool CanAttack { get => !stats.IsDeath && Time.unscaledTime - lastAttackTime >= attackCooldown; }
+
+    [SerializeField] private float maxCombo = 1;
+    [SerializeField] private float comboDuration = 0;
+    private int combo = 0;
+    private float comboMultiplier = 1.5f;
+    private IEnumerator comboResetCoroutine;
 
     private Rigidbody2D rb;
     private CombatAnimator animator;
     private MovementManager movement;
     private Stats stats;
     [SerializeField] private RegenerationManager regenerator;
-
-    private float lastAttackTime = -Mathf.Infinity;
-    private bool CanAttack { get => !stats.IsDeath && Time.unscaledTime - lastAttackTime >= attackCooldown; }
 
     void Awake()
     {
@@ -32,7 +38,12 @@ public class AttackManager : MonoBehaviour
     {
         if (!movement.IsGrounded || !CanAttack) return;
 
-        animator.AnimateAttack();
+        if(comboResetCoroutine != null) StopCoroutine(comboResetCoroutine);
+
+        animator.AnimateAttack(combo);
+        combo++;
+        if(combo >= maxCombo) combo = 0;
+
         rb.linearVelocity = new(0, rb.linearVelocityY);
 
         lastAttackTime = Time.unscaledTime;
@@ -42,14 +53,20 @@ public class AttackManager : MonoBehaviour
             movement.Enable,
             attackDuration
         ));
+        comboResetCoroutine = Util.Timeout(
+            () => combo = 0,
+            comboDuration
+        );
+        StartCoroutine(comboResetCoroutine);
     }
 
-    public void Impact()
+    public void Impact(int combo)
     {
+        var multiplier = Mathf.Pow(comboMultiplier, combo);
         var opponents = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRadius, EnemyLayer);
         foreach (var opponent in opponents)
         {
-            opponent.GetComponent<AttackManager>().TakeDamage(stats.Damage, movement.Direction, knockbackForce);
+            opponent.GetComponent<AttackManager>().TakeDamage(multiplier * stats.Damage, movement.Direction, multiplier * knockbackForce);
         }
     }
 
@@ -66,7 +83,11 @@ public class AttackManager : MonoBehaviour
         rb.AddForce(new Vector2(knockback * direction, 0), ForceMode2D.Force);
 
         animator.AnimateHurt();
-        if (stats.IsDeath) animator.AnimateDeath();
+        if (stats.IsDeath)
+        {
+            movement.Disable();
+            animator.AnimateDeath();
+        }
     }
 
     public void OnDrawGizmos()
