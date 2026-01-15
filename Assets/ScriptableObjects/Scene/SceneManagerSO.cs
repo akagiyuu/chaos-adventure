@@ -15,7 +15,7 @@ public class SceneManagerSO : ScriptableObject
     public IEnumerator LoadStart() => LoadScene(startScene);
     public IEnumerator LoadLose() => LoadScene(loseScene);
     public IEnumerator LoadWin() => LoadScene(winScene);
-    public IEnumerator LoadLevel(int level) => LoadScene($"{levelPrefix} ${level}");
+    public IEnumerator LoadLevel(int level) => LoadScene($"{levelPrefix} {level}");
 
     private IEnumerator LoadScene(string sceneName)
     {
