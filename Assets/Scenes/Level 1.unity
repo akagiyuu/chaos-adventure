@@ -3409,6 +3409,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8282360060420239853, guid: ae1351426d58545a0b40840b997f1c1a, type: 3}
   m_PrefabInstance: {fileID: 6197764808615912255}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &596409459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1438209576}
+    m_Modifications:
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.220341
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6026201
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747767429629971841, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: m_Name
+      value: Death Overlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6936949318459391700, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 2430676730404814388}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+--- !u!4 &596409460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 48300183640799141, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+  m_PrefabInstance: {fileID: 596409459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &615520027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9107665706490725799, guid: fcd79c1c91a423e5da7426a4c8b57364, type: 3}
@@ -3858,6 +3924,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 575306210}
+  - {fileID: 596409460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1447167544
@@ -4881,6 +4948,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
+--- !u!114 &2430676730404814388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1047398294616483721, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
+  m_PrefabInstance: {fileID: 2430676730404814387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29374bec715e13404a281aea9a2a7af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CombatStats
 --- !u!1001 &2921635118026206068
 PrefabInstance:
   m_ObjectHideFlags: 0
