@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Death Overlay
       objectReference: {fileID: 0}
+    - target: {fileID: 6936949318459391700, guid: 282fa297631b45534b84b8927ae68b36, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 1481795818}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3141,6 +3145,17 @@ PolygonCollider2D:
       - {x: 28.768906, y: 16.224043}
       - {x: 23.388405, y: 16.281229}
   m_UseDelaunayMesh: 1
+--- !u!114 &1481795818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1047398294616483721, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
+  m_PrefabInstance: {fileID: 2430676730404814387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29374bec715e13404a281aea9a2a7af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CombatStats
 --- !u!4 &1491521964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9001533579690467230, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
