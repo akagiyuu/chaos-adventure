@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -10,15 +11,19 @@ public class AttackManager : MonoBehaviour
     [SerializeField] private float attackDuration;
     [SerializeField] private float knockbackForce = 1000f;
     public LayerMask EnemyLayer;
+    private float lastAttackTime = -Mathf.Infinity;
+    private bool CanAttack { get => !stats.IsDeath && Time.unscaledTime - lastAttackTime >= attackCooldown; }
+
+    [SerializeField] private float maxCombo = 1;
+    [SerializeField] private float comboDuration = 0;
+    private int combo = 1;
+    private IEnumerator comboResetCoroutine;
 
     private Rigidbody2D rb;
     private CombatAnimator animator;
     private MovementManager movement;
     private Stats stats;
     [SerializeField] private RegenerationManager regenerator;
-
-    private float lastAttackTime = -Mathf.Infinity;
-    private bool CanAttack { get => !stats.IsDeath && Time.unscaledTime - lastAttackTime >= attackCooldown; }
 
     void Awake()
     {
@@ -32,7 +37,12 @@ public class AttackManager : MonoBehaviour
     {
         if (!movement.IsGrounded || !CanAttack) return;
 
-        animator.AnimateAttack();
+        if(comboResetCoroutine != null) StopCoroutine(comboResetCoroutine);
+
+        animator.AnimateAttack(combo);
+        combo++;
+        if(combo > maxCombo) combo = 1;
+
         rb.linearVelocity = new(0, rb.linearVelocityY);
 
         lastAttackTime = Time.unscaledTime;
@@ -42,6 +52,11 @@ public class AttackManager : MonoBehaviour
             movement.Enable,
             attackDuration
         ));
+        comboResetCoroutine = Util.Timeout(
+            () => combo = 1,
+            comboDuration
+        );
+        StartCoroutine(comboResetCoroutine);
     }
 
     public void Impact()

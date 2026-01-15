@@ -14,9 +14,9 @@ public class CombatAnimator : MonoBehaviour
         combat = GetComponentInParent<AttackManager>();
     }
 
-    public void AnimateAttack()
+    public void AnimateAttack(int combo)
     {
-        animator.SetTrigger("attack");
+        animator.SetTrigger($"attack-{combo}");
     }
 
     private void OnImpact()
