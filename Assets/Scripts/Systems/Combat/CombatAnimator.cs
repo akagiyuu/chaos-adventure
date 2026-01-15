@@ -19,9 +19,9 @@ public class CombatAnimator : MonoBehaviour
         animator.SetTrigger($"attack-{combo}");
     }
 
-    private void OnImpact()
+    private void OnImpact(int combo)
     {
-        combat.Impact();
+        combat.Impact(combo);
     }
 
     public void AnimateHurt()

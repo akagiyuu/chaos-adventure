@@ -16,7 +16,8 @@ public class AttackManager : MonoBehaviour
 
     [SerializeField] private float maxCombo = 1;
     [SerializeField] private float comboDuration = 0;
-    private int combo = 1;
+    private int combo = 0;
+    private float comboMultiplier = 1.5f;
     private IEnumerator comboResetCoroutine;
 
     private Rigidbody2D rb;
@@ -41,7 +42,7 @@ public class AttackManager : MonoBehaviour
 
         animator.AnimateAttack(combo);
         combo++;
-        if(combo > maxCombo) combo = 1;
+        if(combo >= maxCombo) combo = 0;
 
         rb.linearVelocity = new(0, rb.linearVelocityY);
 
@@ -53,18 +54,19 @@ public class AttackManager : MonoBehaviour
             attackDuration
         ));
         comboResetCoroutine = Util.Timeout(
-            () => combo = 1,
+            () => combo = 0,
             comboDuration
         );
         StartCoroutine(comboResetCoroutine);
     }
 
-    public void Impact()
+    public void Impact(int combo)
     {
+        var multiplier = Mathf.Pow(comboMultiplier, combo);
         var opponents = Physics2D.OverlapCircleAll(AttackPoint.position, AttackRadius, EnemyLayer);
         foreach (var opponent in opponents)
         {
-            opponent.GetComponent<AttackManager>().TakeDamage(stats.Damage, movement.Direction, knockbackForce);
+            opponent.GetComponent<AttackManager>().TakeDamage(multiplier * stats.Damage, movement.Direction, multiplier * knockbackForce);
         }
     }
 

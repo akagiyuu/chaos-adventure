@@ -13,7 +13,7 @@ public class MovementManager : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private Vector2 groundCheckOffset = new(0, -0.5f);
 
-    [SerializeField] private float minY;
+    [SerializeField] private float minY = -Mathf.Infinity;
 
     private Rigidbody2D rb;
     private Stats stats;
@@ -22,6 +22,7 @@ public class MovementManager : MonoBehaviour
     public float Direction { get; private set; } = 1f;
     private bool canJump = true;
     public bool IsGrounded { get; private set; } = true;
+    public bool IsFalling { get => transform.position.y < minY; }
 
     void Awake()
     {
@@ -32,7 +33,7 @@ public class MovementManager : MonoBehaviour
     void FixedUpdate()
     {
         IsGrounded = CheckGround();
-        if(IsFalling()) stats.Health = 0;
+        if(IsFalling) stats.Health = 0;
     }
 
     public void Move(Vector2 input)
@@ -66,11 +67,6 @@ public class MovementManager : MonoBehaviour
     {
         Vector2 groundCheckPos = (Vector2)transform.position + groundCheckOffset;
         return Physics2D.OverlapCircle(groundCheckPos, groundCheckRadius, groundLayer);
-    }
-
-    private bool IsFalling()
-    {
-        return transform.position.y < minY;
     }
 
     private void Flip()

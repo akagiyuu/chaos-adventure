@@ -4041,7 +4041,7 @@ MonoBehaviour:
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 256
-  maxCombo: 0
+  maxCombo: 1
   comboDuration: 0
   regenerator: {fileID: 0}
 --- !u!114 &1372981543
@@ -4064,7 +4064,7 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckRadius: 0.4
   groundCheckOffset: {x: -0.4, y: -1}
-  minY: 0
+  minY: -7
 --- !u!114 &1372981545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4077,8 +4077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29374bec715e13404a281aea9a2a7af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CombatStats
-  MaxHealth: 10
-  Health: 0
+  MaxHealth: 100
+  Health: 100
   healthBar: {fileID: 0}
   MaxShield: 10
   Shield: 0
@@ -5317,7 +5317,7 @@ MonoBehaviour:
   AttackRadius: 0.9
   attackCooldown: 1
   attackDuration: 0.3
-  knockbackForce: 1000
+  knockbackForce: 500
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 128
