@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]
 public class StartMenu : MonoBehaviour
 {
+    [SerializeField] private string firstLevel = "Level 1";
     [SerializeField] private SceneManagerSO sceneManager;
     private UIDocument UI;
 
@@ -12,10 +12,7 @@ public class StartMenu : MonoBehaviour
     {
         UI = GetComponent<UIDocument>();
 
-        Button playButton = UI.rootVisualElement.Query<Button>("play-button");
-        playButton.clicked += () => StartCoroutine(sceneManager.LoadScene("Level 1"));
-
-        Button exitButton = UI.rootVisualElement.Query<Button>("exit-button");
-        exitButton.clicked += Application.Quit;
+        Image playButton = UI.rootVisualElement.Query<Image>();
+        playButton.RegisterCallback<PointerDownEvent>(e => StartCoroutine(sceneManager.LoadScene(firstLevel)));
     }
 }

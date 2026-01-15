@@ -13,7 +13,7 @@ public class DeathOverlay : MonoBehaviour
     {
         UI = GetComponent<UIDocument>();
 
-        main = UI.rootVisualElement.Query<VisualElement>("main");
+        main = UI.rootVisualElement.Query<VisualElement>();
         main.RegisterCallback<PointerDownEvent>(e => StartCoroutine(sceneManager.LoadScene("Start")));
     }
 }

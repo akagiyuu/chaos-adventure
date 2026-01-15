@@ -1,86 +1,31 @@
-.unity-label {
-    -unity-font-definition: url("project://database/Assets/Fonts/Silver.ttf?fileID=12800000&guid=3c4f9992dc2c22e02a17164eedd6d39e&type=3#Silver");
-    font-size: 72px;
-    color: rgb(255, 255, 255);
-    margin-top: 20px;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    align-self: center;
-    align-items: center;
-}
-
-.unity-button {
-    background-color: rgba(255, 255, 255, 0);
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    margin-top: 10px;
-    margin-right: 0;
-    margin-bottom: 10px;
-    margin-left: 0;
-    border-top-width: 0;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-left-width: 0;
-    -unity-text-align: middle-center;
-    width: 400px;
-    aspect-ratio: auto;
-    height: auto;
-    background-image: url("project://database/Assets/Arts/Medieval%20UI/Medieval.png?fileID=2954381948106029504&guid=0b8b3428ae57c6378b5c20f8dd12365a&type=3#Medieval_220");
-    flex-direction: row;
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.28);
     justify-content: center;
-    transition-duration: 0.3s;
-}
-
-.unity-button:hover {
-    background-color: rgba(255, 255, 255, 0);
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    margin-top: 10px;
-    margin-right: 0;
-    margin-bottom: 10px;
-    margin-left: 0;
-    border-top-width: 0;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-left-width: 0;
-    -unity-text-align: middle-center;
-    width: 400px;
-    aspect-ratio: auto;
-    height: auto;
-    background-image: url("project://database/Assets/Arts/Medieval%20UI/Medieval.png?fileID=2954381948106029504&guid=0b8b3428ae57c6378b5c20f8dd12365a&type=3#Medieval_220");
-    flex-direction: row;
-    justify-content: center;
-    transition-duration: 0s;
-    scale: 1.1 1.1;
 }
 
 #title {
-    font-size: 192px;
-    -unity-font-style: normal;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/Fonts/Silver.ttf?fileID=12800000&guid=3c4f9992dc2c22e02a17164eedd6d39e&type=3#Silver");
+    font-size: 160px;
+    -unity-text-align: upper-center;
 }
 
-#menu {
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: auto;
-    align-self: auto;
-    translate: 0 0;
-    align-content: flex-start;
+#play-button {
+    aspect-ratio: auto;
+    height: 10%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    transition-duration: 0.2s;
 }
 
-#play-icon {
-    width: 12%;
-    margin-right: 10px;
-    margin-left: -20px;
-    height: auto;
+#play-button:hover {
+    aspect-ratio: auto;
+    height: 10%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    scale: 1.1 1.1;
 }

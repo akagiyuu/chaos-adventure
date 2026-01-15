@@ -174,5 +174,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59bfaa685ce1e866db32a2227ab80f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortalManager
-  nextLevel: Start
+  nextLevel: End
   sceneManager: {fileID: 11400000, guid: db7e12d7ef6dc91d6b54d0a3da4dc9d7, type: 2}
