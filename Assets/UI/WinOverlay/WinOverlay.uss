@@ -1,0 +1,18 @@
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+}
+
+#title {
+    color: rgb(16, 255, 0);
+    -unity-font-definition: url("project://database/Assets/Fonts/Silver.ttf?fileID=12800000&guid=3c4f9992dc2c22e02a17164eedd6d39e&type=3#Silver");
+    font-size: 160px;
+    -unity-text-align: upper-center;
+}
+
+#hint {
+    -unity-font-definition: url("project://database/Assets/Fonts/Silver.ttf?fileID=12800000&guid=3c4f9992dc2c22e02a17164eedd6d39e&type=3#Silver");
+    font-size: 64px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: upper-center;
+}

@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/WinOverlay/WinOverlay.uss?fileID=7433441132597879392&amp;guid=008ed30de900ea747858ede3d6ee9b37&amp;type=3#WinOverlay"/>
+    <ui:VisualElement name="main" class="backdrop" style="flex-grow: 1; visibility: hidden;">
+        <ui:Label text="You completed all level!" name="title"/>
+        <ui:Label text="Click anywhere to continue" name="hint"/>
+    </ui:VisualElement>
+</ui:UXML>
