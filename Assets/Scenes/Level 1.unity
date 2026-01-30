@@ -243,11 +243,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &332684767 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 8331926962124218325, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
-  m_PrefabInstance: {fileID: 2430676730404814387}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &386545117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4471,10 +4466,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1047398294616483721, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
-      propertyPath: fill
-      value: 
-      objectReference: {fileID: 332684767}
     - target: {fileID: 1563149313695833077, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4518,14 +4509,6 @@ PrefabInstance:
     - target: {fileID: 3387165958260942091, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587822889391070456, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
-      propertyPath: comboDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587822889391070456, guid: 434c0b718becdc30e96bd4be9286432a, type: 3}
-      propertyPath: attackCooldown
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
