@@ -135,8 +135,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09735465, y: 0.092369914}
-  m_Size: {x: 1.075952, y: 2.0817368}
+  m_Offset: {x: -0.3666718, y: 0.6010809}
+  m_Size: {x: 1.2554975, y: 2.2612824}
   m_Direction: 0
 --- !u!114 &3475849527344319020
 MonoBehaviour:
@@ -157,7 +157,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   groundCheckRadius: 0.3
-  groundCheckOffset: {x: -0.1, y: -0.9}
+  groundCheckOffset: {x: -0.3, y: -0.5}
   minY: -7
 --- !u!114 &1047398294616483721
 MonoBehaviour:
@@ -179,7 +179,6 @@ MonoBehaviour:
   shieldBar: {fileID: 6639544766249356611}
   lerpSpeed: 3
   Damage: 10
-  fill: {fileID: 0}
 --- !u!114 &5587822889391070456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,14 +193,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Combat
   AttackPoint: {fileID: 5817637683069370250}
   AttackRadius: 1
-  attackCooldown: 1
+  attackCooldown: 0.5
   attackDuration: 0.3
   knockbackForce: 500
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 128
   maxCombo: 2
-  comboDuration: 1.5
+  comboDuration: 1
   regenerator: {fileID: 3739485182916289388}
 --- !u!114 &3739485182916289388
 MonoBehaviour:
@@ -586,7 +585,7 @@ Transform:
   m_GameObject: {fileID: 7832291813273751989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.98, y: -0.18, z: 0}
+  m_LocalPosition: {x: 1.44, y: 0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -653,8 +652,8 @@ Transform:
   m_GameObject: {fileID: 8767434679493092405}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3387165958260942091}
@@ -708,7 +707,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7626730168138988562, guid: 6eeee34a8116c31b4a9bedcbacab33ab, type: 3}
+  m_Sprite: {fileID: -8261067076076912886, guid: ec73b268726b3adf39fbaf91beeee1c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -728,7 +727,7 @@ Animator:
   m_GameObject: {fileID: 8767434679493092405}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4686dcd42f8ea489781cac7242c1e8ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 31b0db30fde5af3e09117266aa915886, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
