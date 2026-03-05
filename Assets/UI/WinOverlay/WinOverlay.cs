@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,6 +9,7 @@ public class WinOverlay : MonoBehaviour
     [SerializeField] private SceneManagerSO sceneManager;
     private UIDocument UI;
 
+    private readonly CancellationTokenSource cts = new();
     private VisualElement main;
     private Label title;
 
@@ -21,8 +23,25 @@ public class WinOverlay : MonoBehaviour
         title = UI.rootVisualElement.Query<Label>("title");
     }
 
-    public void Display() {
-        title.text = $"You completed all level in {Mathf.RoundToInt(timer.Elapsed())} seconds";
+    public async void Display()
+    {
+        var time = timer.Elapsed();
+        title.text = $"You completed all level in {Mathf.RoundToInt(time)} seconds";
         main.visible = true;
+
+        var data = new ApiClient.CreateRecordData
+        {
+            time = time
+        };
+
+        try
+        {
+            await ApiClient.CreateRecordAsync(data, cts.Token);
+        }
+        catch (ApiClient.ApiException ex)
+        {
+            Debug.LogError($"API error ({ex.StatusCode}): {ex.Message}");
+            return;
+        }
     }
 }

@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/LoginForm/LoginForm.uss?fileID=7433441132597879392&amp;guid=62271ca90bdca235fb5f75de3658ee35&amp;type=3#LoginForm"/>
+    <ui:VisualElement name="main" style="flex-grow: 1; padding-top: 13%; padding-right: 35%; padding-bottom: 13%; padding-left: 35%; visibility: visible;">
+        <ui:VisualElement style="flex-grow: 1; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; background-color: rgb(255, 255, 255); padding-top: 40px; padding-right: 40px; padding-bottom: 40px; padding-left: 40px; justify-content: flex-start; align-items: stretch; align-content: flex-start; align-self: auto;">
+            <ui:Label text="Login" class="title"/>
+            <ui:VisualElement style="flex-grow: 1; justify-content: center;">
+                <ui:TextField label="Username" placeholder-text="Type username" name="username" class="field"/>
+                <ui:TextField label="Password" placeholder-text="Type password" name="password" class="field"/>
+            </ui:VisualElement>
+            <ui:Button text="Login" name="login" class="action" style="margin-top: 20px;"/>
+            <ui:Button text="Go to Register" name="register" class="action"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,21 @@
+.title {
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=c5bfb88f1151f7030910364112c8190d&type=3#NotInter-Regular");
+    font-size: 64px;
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+}
+
+.field {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=c5bfb88f1151f7030910364112c8190d&type=3#NotInter-Regular");
+    font-size: 20px;
+}
+
+.action {
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=c5bfb88f1151f7030910364112c8190d&type=3#NotInter-Regular");
+    font-size: 20px;
+    -unity-font-style: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
