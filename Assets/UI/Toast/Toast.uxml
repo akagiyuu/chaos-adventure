@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="main" style="flex-grow: 1; position: absolute; width: 30%; height: 15%; top: auto; left: auto; bottom: 5%; right: 2.5%; background-color: rgb(255, 255, 255); visibility: hidden;">
+        <ui:Label text="Toast" name="title" style="font-size: 32px; height: 30%;"/>
+        <ui:Label text="Toast" name="detail" style="font-size: 20px; height: 70%;"/>
+    </ui:VisualElement>
+</ui:UXML>

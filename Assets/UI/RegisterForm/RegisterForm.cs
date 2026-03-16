@@ -12,6 +12,8 @@ public class RegisterForm : MonoBehaviour
     private UIDocument loginUI;
     [SerializeField]
     private UIDocument recordUI;
+    [SerializeField]
+    private Toast toast;
 
     void Awake()
     {
@@ -31,6 +33,7 @@ public class RegisterForm : MonoBehaviour
         var confirmPassword = GetConfirmPassword();
         if (password != confirmPassword)
         {
+            toast.Notify("Register Error", "Password does not match");
             Debug.Log("Password does not match");
             return;
         }
@@ -48,7 +51,8 @@ public class RegisterForm : MonoBehaviour
         }
         catch (ApiClient.ApiException ex)
         {
-            Debug.LogError($"API error ({ex.StatusCode}): {ex.Message}");
+            toast.Notify("Register Error", ex.Error.detail);
+            Debug.LogError($"API error ({ex.StatusCode}): {ex.Error.detail}");
             return;
         }
 

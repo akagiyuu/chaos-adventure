@@ -12,6 +12,8 @@ public class LoginForm : MonoBehaviour
     private UIDocument registerUI;
     [SerializeField]
     private UIDocument recordUI;
+    [SerializeField]
+    private Toast toast;
 
     void Awake()
     {
@@ -39,7 +41,8 @@ public class LoginForm : MonoBehaviour
         }
         catch (ApiClient.ApiException ex)
         {
-            Debug.LogError($"API error ({ex.StatusCode}): {ex.Message}");
+            toast.Notify("Login Error", ex.Error.detail);
+            Debug.LogError($"API error ({ex.StatusCode}): {ex.Error.detail}");
             return;
         }
 

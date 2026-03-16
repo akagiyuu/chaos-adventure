@@ -188,7 +188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoginForm
   registerUI: {fileID: 601504193}
-  recordUI: {fileID: 0}
+  recordUI: {fileID: 1602388463}
+  toast: {fileID: 1761708663}
 --- !u!1001 &408487418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,7 +502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RegisterForm
   loginUI: {fileID: 77803858}
-  recordUI: {fileID: 0}
+  recordUI: {fileID: 1602388463}
+  toast: {fileID: 1761708663}
 --- !u!1 &1062735816
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +536,7 @@ Transform:
   - {fileID: 77803857}
   - {fileID: 601504192}
   - {fileID: 1602388461}
+  - {fileID: 1761708662}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602388460
@@ -581,7 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285e55eb35a8b5b3e8ab13b527c48626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RecordList
-  uiDocument: {fileID: 0}
+  sceneManager: {fileID: 11400000, guid: db7e12d7ef6dc91d6b54d0a3da4dc9d7, type: 2}
+  timer: {fileID: 11400000, guid: afdd33178df0df0e7be47b55c7e1fc38, type: 2}
 --- !u!114 &1602388463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,6 +601,74 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: 39f176c713ec3eecf9e60c72a5c90bb9, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 014b347ae8cc4a0379d9b878128df9da, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!1 &1761708661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761708662}
+  - component: {fileID: 1761708664}
+  - component: {fileID: 1761708663}
+  m_Layer: 0
+  m_Name: Toast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761708662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761708661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1062735817}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1761708663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761708661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2180d3705a3a8956ba09d12d2857e88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Toast
+--- !u!114 &1761708664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761708661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 39f176c713ec3eecf9e60c72a5c90bb9, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 65927f8dc517b52929328518a0afc93f, type: 3}
   m_SortingOrder: 0
   m_Position: 0
   m_WorldSpaceSizeMode: 1
